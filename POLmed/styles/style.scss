@@ -1,4 +1,7 @@
-@import "_bootswatch";
-@import "bootstrap/scss/bootstrap";
-@import "_variables";
+//@import "bootstrap/scss/functions"; //odkomentować gdy będzie ich trzeba w variables
 
+@import "variables";
+
+@import "bootstrap/scss/bootstrap";
+
+@import "_bootswatch";
