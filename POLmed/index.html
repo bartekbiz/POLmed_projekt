@@ -8,19 +8,53 @@
 	</head>
 	
 	<body>
-		<nav class="navbar navbar-expand-xs bg-primary navbar-dark">
+		<nav class="navbar navbar-expand-xs position-fixed top-0 w-100 navbar-dark bg-primary" style="z-index:9999">
 			<div class="container">
 				<a class="navbar-brand" href="index.html">POLmed</a>
 			</div>
 		</nav>
+		<div id="unique-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="w-100 vh-100">
+						<div class="h-100 d-flex align-items-center justify-content-center">
+							<div class="text-center">
+								<h1 class="display-1">Witaj, świecie!</h1>
+								<p class="lead">Usługi położnicze na wyciągnięcie ręki</p>
+								<button type="button" class="btn btn-lg btn-primary">Znajdź położną</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="w-100 vh-100">
+						<div class="h-100 d-flex align-items-center justify-content-center">
+							<div class="text-center">
+								<h1 class="display-1">Tanie badanie</h1>
+								<p class="lead">Dobrze jest wtedy, gdy nic nie boli</p>
+								<button type="button" class="btn btn-lg btn-primary">Zobacz listę dostępnych badań</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#unique-carousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Wstecz</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#unique-carousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Dalej</span>
+			</button>
+		</div>
 		<div class="container">
 			<div class="page-header">
-				<h1>No cześć</h1>
+				<h1>A najlepiej umiemy leczyć...</h1>
 			</div>
 		</div>
 		<noscrit>
-			<div class="alert alert-warning position-fixed bottom-0 end-0 m-3" role="alert">
-				JavaScript <s>nie</s> jest wyłączony. Niektóre funkcje tej strony internetowej mogą <s>i tak</s> nie działać poprawnie.
+			<div class="alert alert-warning position-fixed bottom-0 end-0 m-3" role="alert" style="z-index:9999">
+				JavaScript <s>chyba nie</s> jest wyłączony. Niektóre funkcje tej strony internetowej mogą <s>i tak</s> nie działać poprawnie.
 			</div>
 		</noscrit>
 		<script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
