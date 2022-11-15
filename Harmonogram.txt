@@ -1,2 +1,11 @@
-co jak i kiedy
-do 25 stycznia 2022
+Termin: do 25 stycznia 2022
+Do 30.11.2022:
+- Projekt wyglądu strony.
+- Wstępna konfiguracja środowiska.
+Do 30.12.2022:
+- Implementacja wyglądu strony
+- Projektowanie fukncjonalności strony.
+Plan Styczniowy:
+- Testowanie strony
+- Ostatnie poprawki
+- Dokumentacja
