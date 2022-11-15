@@ -2,6 +2,7 @@ Termin: do 25 stycznia 2022
 Do 30.11.2022:
 - Projekt wyglądu strony.
 - Wstępna konfiguracja środowiska.
+- Projekt Logo
 Do 30.12.2022:
 - Implementacja wyglądu strony
 - Projektowanie fukncjonalności strony.
