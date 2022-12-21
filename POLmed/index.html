@@ -9,7 +9,7 @@
 	</head>
 	
 	<body>
-		<nav class="navbar py-3 navbar-expand-md position-fixed top-0 w-100 navbar-dark bg-primary" style="z-index:9999">
+		<nav id="navbar" class="navbar py-3 navbar-expand-md position-fixed top-0 w-100 navbar-dark bg-primary" style="z-index:9999">
 			<div class="container">
 				<a class="navbar-brand" href="index.html">POLmed logo stub</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Menu">
@@ -54,6 +54,10 @@
 			<button class="carousel-control-next" type="button" data-bs-target="#unique-carousel" data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Dalej</span>
+			</button>
+			<button class="carousel-control-next d-block w-100" style="z-index:2;top:auto;font-size:4em" onclick="window.scrollBy(0, document.querySelector('#unique-carousel').clientHeight - document.querySelector('#navbar').clientHeight)">
+				<span class="carousel-control-next-icon" style="transform:rotate(90deg)" aria-hidden="true"></span>
+				<span class="visually-hidden">W dół</span>
 			</button>
 		</div>
 		<div class="container">
