@@ -9,50 +9,60 @@
 	</head>
 	
 	<body>
-		<nav id="navbar" class="navbar py-3 navbar-expand-md position-fixed top-0 w-100 navbar-dark bg-primary" style="z-index:9999">
+		<nav id="navbar" class="navbar py-3 navbar-expand-md position-absolute top-0 w-100" style="z-index:9999;">
 			<div class="container">
-				<a class="navbar-brand" href="index.html">POLmed logo stub</a>
+				<a class="navbar-brand text-primary" href="index.html">POLmed logo stub</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Menu">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbar-menu">
 					<ul class="navbar-nav ms-md-auto">
-						<li class="nav-item"><a class="nav-link" href="account.html">Rejestracja</a></li>
+						<li class="nav-item"><a class="nav-link" href="staff.html">Zarezerwuj wizytę</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="konto" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							  <b>Jan Kowalski</b>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="konto">
+							  <a class="dropdown-item" href="account.html">Konto</a>
+							  <div class="dropdown-divider"></div>
+							  <a class="dropdown-item" href="logout.html">Wyloguj się</a>
+							</div>
+						  </li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<div id="unique-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+		<div id="unique-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="10000">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<div class="w-100 vh-100" style="background-image:url('imgs/count-chris-yOSHqKxyz-g-unsplash.jpg');background-size:cover;background-position:center">
-						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)), linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
+						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)),linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
 							<div class="text-center" style="text-shadow:0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff">
 								<h1 class="display-1">Witaj, świecie!</h1>
 								<p class="lead">Usługi położnicze na wyciągnięcie ręki</p>
-								<button type="button" class="btn btn-lg btn-primary">Znajdź położną</button>
+								<a href="staff.html#polozne" role="button" class="btn btn-lg btn-primary">Znajdź położną</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="w-100 vh-100" style="background-image:url('imgs/christopher-boswell-GEzNsJarkGU-unsplash.jpg');background-size:cover;background-position:center">
-						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)), linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
+						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)),linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
 							<div class="text-center" style="text-shadow:0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff">
 								<h1 class="display-1">Tanie badanie</h1>
 								<p class="lead">Bo dobrze jest wtedy, gdy nic nie boli</p>
-								<button type="button" class="btn btn-lg btn-primary">Zobacz lekarzy</button>
+								<a href="staff.html#lekarze" role="button" class="btn btn-lg btn-primary">Zobacz lekarzy</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="w-100 vh-100" style="background-image:url('imgs/anton-8q-U8X1zkvI-unsplash.jpg');background-size:cover;background-position:center">
-						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)), linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
+						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)),linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
 							<div class="text-center" style="text-shadow:0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff">
 								<h1 class="display-1">Opieka człowieka</h1>
 								<p class="lead">Opatrzymy Cię, gdziekolwiek jesteś</p>
-								<button type="button" class="btn btn-lg btn-primary">Poznaj naszych pielęgniarzy</button>
+								<a href="staff.html#pielegniarze" role="button" class="btn btn-lg btn-primary">Poznaj naszych pielęgniarzy</a>
 							</div>
 						</div>
 					</div>
