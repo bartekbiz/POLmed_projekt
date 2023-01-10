@@ -5,13 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="styles/style.min.css" rel="stylesheet">
 		<link href="styles/custom_style.css" rel="stylesheet">
-		<title>POLmed</title>
+		<title>Zarezerwuj wizytę - POLmed</title>
 	</head>
 	
 	<body>
-		<nav id="navbar" class="navbar py-3 navbar-expand-md position-absolute top-0 w-100" style="z-index:9999;">
+		<nav id="navbar" class="navbar py-3 navbar-expand-md top-0 w-100" style="z-index:9999;">
 			<div class="container">
-				<a class="navbar-brand text-primary" href="index.html">POLmed logo stub</a>
+				<a class="navbar-brand text-primary" href="index.html"><img src="imgs/logo_polmed.png" style="height:3.5rem;margin-top:-0.5rem;margin-bottom:-1rem" alt="POLmed"/></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Menu">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -20,77 +20,93 @@
 						<li class="nav-item"><a class="nav-link" href="staff.html">Zarezerwuj wizytę</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="konto" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							  <b>Jan Kowalski</b>
+								<b>Jan Kowalski</b>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="konto">
-							  <a class="dropdown-item" href="account.html">Konto</a>
-							  <div class="dropdown-divider"></div>
-							  <a class="dropdown-item" href="logout.html">Wyloguj się</a>
+								<a class="dropdown-item" href="#">Konto</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Wyloguj się</a>
 							</div>
 						  </li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<div id="unique-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="10000">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<div class="w-100 vh-100" style="background-image:url('imgs/count-chris-yOSHqKxyz-g-unsplash.jpg');background-size:cover;background-position:center">
-						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)),linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
-							<div class="text-center" style="text-shadow:0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff">
-								<h1 class="display-1">Witaj, świecie!</h1>
-								<p class="lead">Usługi położnicze na wyciągnięcie ręki</p>
-								<a href="staff.html#polozne" role="button" class="btn btn-lg btn-primary">Znajdź położną</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="w-100 vh-100" style="background-image:url('imgs/christopher-boswell-GEzNsJarkGU-unsplash.jpg');background-size:cover;background-position:center">
-						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)),linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
-							<div class="text-center" style="text-shadow:0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff">
-								<h1 class="display-1">Tanie badanie</h1>
-								<p class="lead">Bo dobrze jest wtedy, gdy nic nie boli</p>
-								<a href="staff.html#lekarze" role="button" class="btn btn-lg btn-primary">Zobacz lekarzy</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="w-100 vh-100" style="background-image:url('imgs/anton-8q-U8X1zkvI-unsplash.jpg');background-size:cover;background-position:center">
-						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)),linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
-							<div class="text-center" style="text-shadow:0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff">
-								<h1 class="display-1">Opieka człowieka</h1>
-								<p class="lead">Opatrzymy Cię, gdziekolwiek jesteś</p>
-								<a href="staff.html#pielegniarze" role="button" class="btn btn-lg btn-primary">Poznaj naszych pielęgniarzy</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#unique-carousel" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Wstecz</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#unique-carousel" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Dalej</span>
-			</button>
-			<button class="carousel-control-next d-block w-100" style="z-index:2;top:auto;font-size:4em" onclick="window.scrollTo(0, document.querySelector('#unique-carousel').clientHeight - document.querySelector('#navbar').clientHeight)">
-				<span class="carousel-control-next-icon" style="transform:rotate(90deg)" aria-hidden="true"></span>
-				<span class="visually-hidden">W dół</span>
-			</button>
-		</div>
 		<div class="container">
-			<div class="page-header p-4">
-				<h2>A najlepiej umiemy leczyć...</h2>
-				<p>
-					Nasza przychodnia została założona w 2022 roku przez grupę wyróżniających się studentów Politechniki Krakowskiej jako legalnie zarejestrowana w Ułan Bator spółka z ograniczoną odpowiedzialnością świadcząca prawdziwe usługi medyczne. Nasz młody, dynamiczny zespół lekarzy rezydentów z wielotygodniowym doświadczeniem cieszy się najlepszymi ocenami w swej lokalizacji, a nasi pacjenci okazują statystycznie zauważoną lojalność, korzystając z naszych usług ponadprzeciętnie długo. I ty lecz się z nami już od dziś, bez kolejki!
-				</p>
-				<h2 class="mt-5">Nasz zespół</h2>
-				<p>
-					Tu będzie nasz zespół.
-				</p>
+			<div class="page-header p-5">
+				<ul class="nav nav-tabs nav-justified">
+					<li class="nav-item">
+						<button id="wszyscy" class="nav-link active" data-bs-target="#twszyscy" data-bs-toggle="tab" type="button" role="tab" aria-controls="twszyscy" aria-selected="true">Wszyscy</a>
+					</li>
+					<li class="nav-item">
+						<button id="lekarze" class="nav-link" data-bs-target="#tlekarze" data-bs-toggle="tab" type="button" role="tab" aria-controls="tlekarze" aria-selected="true">Lekarze</a>
+					</li>
+					<li class="nav-item">
+						<button id="pielegniarze" class="nav-link" data-bs-target="#tpielegniarze" data-bs-toggle="tab" type="button" role="tab" aria-controls="tpielegniarze" aria-selected="true">Pielęgniarze</a>
+					</li>
+					<li class="nav-item">
+						<button id="polozne" class="nav-link" data-bs-target="#tpolozne" data-bs-toggle="tab" type="button" role="tab" aria-controls="tpolozne" aria-selected="true">Położne</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade show active" id="twszyscy" role="tabpanel" aria-labelledby="wszyscy">
+						<div class="row p-4">
+							<div class="col-md-4 p-3">
+								<div class="card">
+									<div class="card-body">
+										<img class="w-100" src="imgs/logo_polmed.png" alt=""/>
+										<h5 class="card-title">Imię Nazwisko</h5>
+										<h6 class="card-subtitle mb-2 text-muted">Lekarz czy coś</h6>
+										<p class="card-text">Jakiś tam opis</p>
+										<a href="#" class="btn btn-primary w-100">Zarezerwuj wizytę</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 p-3">
+								<div class="card">
+									<div class="card-body">
+										<img class="w-100" src="imgs/logo_polmed.png" alt=""/>
+										<h5 class="card-title">Imię Nazwisko</h5>
+										<h6 class="card-subtitle mb-2 text-muted">Lekarz czy coś</h6>
+										<p class="card-text">Jakiś tam opis</p>
+										<a href="#" class="btn btn-primary w-100">Zarezerwuj wizytę</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 p-3">
+								<div class="card">
+									<div class="card-body">
+										<img class="w-100" src="imgs/logo_polmed.png" alt=""/>
+										<h5 class="card-title">Imię Nazwisko</h5>
+										<h6 class="card-subtitle mb-2 text-muted">Lekarz czy coś</h6>
+										<p class="card-text">Jakiś tam opis</p>
+										<a href="#" class="btn btn-primary w-100">Zarezerwuj wizytę</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 p-3">
+								<div class="card">
+									<div class="card-body">
+										<img class="w-100" src="imgs/logo_polmed.png" alt=""/>
+										<h5 class="card-title">Imię Nazwisko</h5>
+										<h6 class="card-subtitle mb-2 text-muted">Lekarz czy coś</h6>
+										<p class="card-text">Jakiś tam opis</p>
+										<a href="#" class="btn btn-primary w-100">Zarezerwuj wizytę</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tlekarze" role="tabpanel" aria-labelledby="lekarze">
+						Lekarze
+					</div>
+					<div class="tab-pane fade" id="tpielegniarze" role="tabpanel" aria-labelledby="pielegniarze">
+						Pielęgniarze
+					</div>
+					<div class="tab-pane fade" id="tpolozne" role="tabpanel" aria-labelledby="polozne">
+						Położne
+					</div>
+				  </div>
 			</div>
 		</div>
 		<div class="mt-5">
@@ -137,5 +153,10 @@
 			</div>
 		</noscript>	
 		<script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			if(window.location.hash == "#lekarze" || window.location.hash == "#pielegniarze" || window.location.hash == "#polozne") {
+				bootstrap.Tab.getOrCreateInstance(document.querySelector(window.location.hash)).show();
+			}
+		</script>
 	</body>
 </html>
