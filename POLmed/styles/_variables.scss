@@ -6,7 +6,7 @@
  */
 
 $theme: "cerulean" !default;
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 //
 // Color system
@@ -65,4 +65,4 @@ $dropdown-link-hover-bg:        $primary !default;
 $navbar-dark-color:             rgba($white, .8) !default;
 $navbar-dark-hover-color:       $white !default;
 
-$font-family-base: Roboto;
+$font-family-base: Roboto, Sans-serif;
