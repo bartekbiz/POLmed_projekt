@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="styles/style.min.css" rel="stylesheet">
+		<link href="styles/custom_style.css" rel="stylesheet">
+		<title>POLmed</title>
+	</head>
+	
+	<body>
+		<nav id="navbar" class="navbar py-3 navbar-expand-md position-absolute top-0 w-100" style="z-index:9999;">
+			<div class="container">
+				<a class="navbar-brand text-primary" href="index.html">POLmed logo stub</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Menu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar-menu">
+					<ul class="navbar-nav ms-md-auto">
+						<li class="nav-item"><a class="nav-link" href="staff.html">Zarezerwuj wizytę</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="konto" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							  <b>Jan Kowalski</b>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="konto">
+							  <a class="dropdown-item" href="account.html">Konto</a>
+							  <div class="dropdown-divider"></div>
+							  <a class="dropdown-item" href="logout.html">Wyloguj się</a>
+							</div>
+						  </li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div id="unique-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="10000">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="w-100 vh-100" style="background-image:url('imgs/count-chris-yOSHqKxyz-g-unsplash.jpg');background-size:cover;background-position:center">
+						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)),linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
+							<div class="text-center" style="text-shadow:0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff">
+								<h1 class="display-1">Witaj, świecie!</h1>
+								<p class="lead">Usługi położnicze na wyciągnięcie ręki</p>
+								<a href="staff.html#polozne" role="button" class="btn btn-lg btn-primary">Znajdź położną</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="w-100 vh-100" style="background-image:url('imgs/christopher-boswell-GEzNsJarkGU-unsplash.jpg');background-size:cover;background-position:center">
+						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)),linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
+							<div class="text-center" style="text-shadow:0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff">
+								<h1 class="display-1">Tanie badanie</h1>
+								<p class="lead">Bo dobrze jest wtedy, gdy nic nie boli</p>
+								<a href="staff.html#lekarze" role="button" class="btn btn-lg btn-primary">Zobacz lekarzy</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="w-100 vh-100" style="background-image:url('imgs/anton-8q-U8X1zkvI-unsplash.jpg');background-size:cover;background-position:center">
+						<div class="h-100 d-flex align-items-center justify-content-center" style="background-image:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1)),linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.64) 20% 80%, rgba(255,255,255,1))">
+							<div class="text-center" style="text-shadow:0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff, 0px 0px 4.5vmax #fff">
+								<h1 class="display-1">Opieka człowieka</h1>
+								<p class="lead">Opatrzymy Cię, gdziekolwiek jesteś</p>
+								<a href="staff.html#pielegniarze" role="button" class="btn btn-lg btn-primary">Poznaj naszych pielęgniarzy</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#unique-carousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Wstecz</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#unique-carousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Dalej</span>
+			</button>
+			<button class="carousel-control-next d-block w-100" style="z-index:2;top:auto;font-size:4em" onclick="window.scrollTo(0, document.querySelector('#unique-carousel').clientHeight - document.querySelector('#navbar').clientHeight)">
+				<span class="carousel-control-next-icon" style="transform:rotate(90deg)" aria-hidden="true"></span>
+				<span class="visually-hidden">W dół</span>
+			</button>
+		</div>
+		<div class="container">
+			<div class="page-header p-4">
+				<h2>A najlepiej umiemy leczyć...</h2>
+				<p>
+					Nasza przychodnia została założona w 2022 roku przez grupę wyróżniających się studentów Politechniki Krakowskiej jako legalnie zarejestrowana w Ułan Bator spółka z ograniczoną odpowiedzialnością świadcząca prawdziwe usługi medyczne. Nasz młody, dynamiczny zespół lekarzy rezydentów z wielotygodniowym doświadczeniem cieszy się najlepszymi ocenami w swej lokalizacji, a nasi pacjenci okazują statystycznie zauważoną lojalność, korzystając z naszych usług ponadprzeciętnie długo. I ty lecz się z nami już od dziś, bez kolejki!
+				</p>
+				<h2 class="mt-5">Nasz zespół</h2>
+				<p>
+					Tu będzie nasz zespół.
+				</p>
+			</div>
+		</div>
+		<div class="mt-5">
+			<footer class="bg-light text-center text-md-start">
+				<div class="container p-4">
+					<div class="row">
+						<div class="col-md-9">
+							<h4>POLmed</h4>
+							<p>
+								ul. Świętego Sebastiana 9<br>
+								31-049 Kraków, Polska<br>
+								<br>
+								<b>Napisz:</b> <a class="link-dark" href="mailto:POLMED.krakow@gmail.com">POLMED.krakow@gmail.com</a><br>
+								<b>Zadzwoń:</b> <a class="link-dark" href="tel:+48672825425">+48 672 825 425</a><br>
+								<br>
+								<b>NIP:</b> 945-145-13-87<br>
+								<b>NFZ:</b> 061/400075<br>
+								<b>RPWDL:</b> 000000005874<br>
+								<b>BDO:</b> 000013799<br>
+								<br>
+							</p>
+						</div>
+						<div class="col-md-3 d-flex align-items-center">
+							<div class="row">
+								<div class="col-8 d-flex align-items-center">
+									<a href="https://nfz.gov.pl/">
+										<img src="imgs/NFZ_logo.png" alt="NFZ" class="img-fluid footer-logo">
+									</a>
+								</div>
+								<div class="col-4 d-flex align-items-center">
+									<a href="https://www.facebook.com/">
+										<img src="imgs/f_logo_RGB-Blue_512.png" alt="Facebook" class="img-fluid footer-logo">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<noscript>
+			<div class="alert alert-warning position-fixed bottom-0 end-0 m-3" role="alert" style="z-index:9999">
+				JavaScript jest wyłączony. Niektóre funkcje tej strony internetowej mogą nie działać poprawnie.
+			</div>
+		</noscript>	
+		<script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
