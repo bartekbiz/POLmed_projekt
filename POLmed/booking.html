@@ -124,9 +124,58 @@
 		</noscript>	
 		<script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script>
-			if(window.location.hash == "#lekarze" || window.location.hash == "#pielegniarze" || window.location.hash == "#polozne") {
-				bootstrap.Tab.getOrCreateInstance(document.querySelector(window.location.hash)).show();
+			function getRandomDate(msToAdd) {
+				var date = new Date(new Date().getTime() + msToAdd);
+				var yyyy = date.getFullYear();
+				var mm = String(date.getMonth() + 1).padStart(2, '0');
+				
+				// making sure that weekend date is not returned
+				var weekDay = date.getDay();
+				if (weekDay == 6) {
+					var dd = String(date.getDate() + getRandomInt(2, 7)).padStart(2, '0');
+				}
+				else if (weekDay == 0) {
+					var dd = String(date.getDate() + getRandomInt(1, 6)).padStart(2, '0');
+				}
+				else {
+					var dd = String(date.getDate()).padStart(2, '0');
+				}
+				
+				// making sure that returned hours are between 10:00 and 18:00
+				var hh = date.getHours();
+				if (hh < 10 || hh > 18) {
+					hh = 10 + getRandomInt(0, 8);
+				}
+
+				// selecting minutes
+				if (msToAdd % 2 == 0) {
+					var min = '00';
+				}
+				else {
+					var min = '30';
+				}
+
+				date = yyyy + '.' + mm + '.' + dd + ' - ' + hh + ':' + min;
+				return date;
 			}
+
+			function getRandomInt(min, max) {
+    			return Math.floor(Math.random() * (max - min) + min);
+			}
+			
+			var minValueToAdd = 60*60*1000;
+			var maxValueToAdd = 10*24*60*60*1000;
+			const randomDates = [
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd))
+			];
+			randomDates.sort();
+
+			console.log(randomDates);
 		</script>
 	</body>
 </html>
