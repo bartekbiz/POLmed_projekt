@@ -40,8 +40,8 @@
                 <div class ="row">
                     <div class="col-sm pb-4">
                         <img class="w-100" src="imgs/logo_polmed.png" alt=""/>
-                        <h5 class="card-title">Imię Nazwisko</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Lekarz czy coś</h6>
+                        <h5 id="lekarz" class="card-title"></h5>
+                        <h6 id="spec" class="card-subtitle mb-2 text-muted"></h6>
                         <p class="card-text">Jakiś tam opis</p>
                     </div>
                     <div class="col"></div>
@@ -124,9 +124,9 @@
 		</noscript>	
 		<script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script>
-			if(window.location.hash == "#lekarze" || window.location.hash == "#pielegniarze" || window.location.hash == "#polozne") {
-				bootstrap.Tab.getOrCreateInstance(document.querySelector(window.location.hash)).show();
-			}
+			const params = new URLSearchParams(new URL(window.location.href).search);
+			document.getElementById("lekarz").innerText = params.get("lekarz");
+			document.getElementById("spec").innerText = params.get("spec");
 		</script>
 	</body>
 </html>
