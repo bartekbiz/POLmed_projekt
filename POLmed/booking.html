@@ -55,20 +55,23 @@
                                 <option value="3">Choroba</option>
                                 <option value="4">Wypisanie recepty</option>
                                 <option value="5">Szczepienie</option>
-                                </select>
+                            </select>
                         </div>
                         <div class="container pb-4">
                             <b>Wybierz datę wizyty</b>
                             <select class="form-select" aria-label="select-visit-date">
                                 <option selected>Kliknij, aby wybrać</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+								<option id="date0" value="0"></option>
+                                <option id="date1" value="1"></option>
+                                <option id="date2" value="2"></option>
+                                <option id="date3" value="3"></option>
+								<option id="date4" value="4"></option>
+								<option id="date5" value="5"></option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row pt-5">
                     <div class="col-sm"></div>
                     <div class="col-sm"></div>
                     <div class="col-sm">
@@ -124,25 +127,51 @@
 		</noscript>	
 		<script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script>
+			const params = new URLSearchParams(new URL(window.location.href).search);
+			document.getElementById("lekarz").innerText = params.get("lekarz");
+			document.getElementById("spec").innerText = params.get("spec");
+			
+			var minValueToAdd = getTodayRemainingMs();
+			var maxValueToAdd = 4*24*60*60*1000;
+
+			const randomDates = [
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd))
+			];
+			randomDates.sort();
+
+			document.getElementById("date0").innerText = randomDates[0];
+			document.getElementById("date1").innerText = randomDates[1];
+			document.getElementById("date2").innerText = randomDates[2];
+			document.getElementById("date3").innerText = randomDates[3];
+			document.getElementById("date4").innerText = randomDates[4];
+			document.getElementById("date5").innerText = randomDates[5];
+
+			console.log(getTodayRemainingMs());
+
 			function getRandomDate(msToAdd) {
-				var date = new Date(new Date().getTime() + msToAdd);
-				var yyyy = date.getFullYear();
-				var mm = String(date.getMonth() + 1).padStart(2, '0');
+				var randomDate = new Date(new Date().getTime() + msToAdd);
+				var yyyy = randomDate.getFullYear();
+				var mm = String(randomDate.getMonth() + 1).padStart(2, '0');
 				
 				// making sure that weekend date is not returned
-				var weekDay = date.getDay();
+				var weekDay = randomDate.getDay();
 				if (weekDay == 6) {
-					var dd = String(date.getDate() + getRandomInt(2, 7)).padStart(2, '0');
+					var dd = String(randomDate.getDate() + 2).padStart(2, '0');
 				}
 				else if (weekDay == 0) {
-					var dd = String(date.getDate() + getRandomInt(1, 6)).padStart(2, '0');
+					var dd = String(randomDate.getDate() + getRandomInt(2, 6)).padStart(2, '0');
 				}
 				else {
-					var dd = String(date.getDate()).padStart(2, '0');
+					var dd = String(randomDate.getDate()).padStart(2, '0');
 				}
 				
 				// making sure that returned hours are between 10:00 and 18:00
-				var hh = date.getHours();
+				var hh = randomDate.getHours();
 				if (hh < 10 || hh > 18) {
 					hh = 10 + getRandomInt(0, 8);
 				}
@@ -155,31 +184,22 @@
 					var min = '30';
 				}
 
-				date = yyyy + '.' + mm + '.' + dd + ' - ' + hh + ':' + min;
-				return date;
+				randomDate = yyyy + '.' + mm + '.' + dd + ' - ' + hh + ':' + min;
+				return randomDate;
+			}
+
+			function getTodayRemainingMs() {
+				var today = new Date();
+				var tommorrow = new Date();
+				tommorrow.setDate(tommorrow.getDate() + 1);
+				tommorrow.setHours(0,0,0,0);
+
+				return tommorrow - today;
 			}
 
 			function getRandomInt(min, max) {
     			return Math.floor(Math.random() * (max - min) + min);
 			}
-			
-			var minValueToAdd = 60*60*1000;
-			var maxValueToAdd = 10*24*60*60*1000;
-			const randomDates = [
-				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
-				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
-				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
-				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
-				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd)),
-				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd))
-			];
-			randomDates.sort();
-
-			console.log(randomDates);
-
-			const params = new URLSearchParams(new URL(window.location.href).search);
-			document.getElementById("lekarz").innerText = params.get("lekarz");
-			document.getElementById("spec").innerText = params.get("spec");
 		</script>
 	</body>
 </html>
