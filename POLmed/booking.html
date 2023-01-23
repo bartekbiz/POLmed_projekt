@@ -66,10 +66,10 @@
 			<div class="p-5">
 				<div class="row">
 					<div class="col-sm pb-4">
-						<img class="w-100" src="imgs/logo_polmed.png" alt="" />
-						<h5 id="lekarz" class="card-title"></h5>
+						<img class="w-100" id="img" src="imgs/logo_polmed.png" alt="" />
+						<h5 id="name" class="card-title"></h5>
 						<h6 id="spec" class="card-subtitle mb-2 text-muted"></h6>
-						<p class="card-text">Jakiś tam opis</p>
+						<p class="card-text" id="desc">Jakiś tam opis</p>
 					</div>
 					<div class="col"></div>
 					<div class="col-sm">
@@ -175,8 +175,16 @@
 		<script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script>
 			const params = new URLSearchParams(new URL(window.location.href).search);
-			document.getElementById("lekarz").innerText = params.get("lekarz");
-			document.getElementById("spec").innerText = params.get("spec");
+			fetch("./data/staff.json")
+				.then((res) => res.json())
+				.then((data) => {
+					let lekarz = data.lekarze.concat(data.polozne, data.pielegniarze)[params.get("id")];
+
+					document.getElementById("img").src = lekarz.img;
+					document.getElementById("name").innerText = lekarz.name;
+					document.getElementById("spec").innerText = lekarz.spec;
+					document.getElementById("desc").innerText = lekarz.desc;
+			});
 
 			var minValueToAdd = getTodayRemainingMs();
 			var maxValueToAdd = 4 * 24 * 60 * 60 * 1000;

@@ -1,63 +1,55 @@
 {
 	"lekarze": [
-		{
-			"id": 1,
-            "img": "imgs/staff/doctor 1.jpg",
-			"name": "Adam Kowalski",
-			"profession": "Pediatra",
-			"desc": "Jakiś tam opis"
-		},
-		{
-			"id": 2,
+        {
             "img": "imgs/staff/doctor 2.jpg",
 			"name": "Mariusz Dąb",
-			"profession": "Lekarz rodzinny",
+			"spec": "Lekarz rodzinny",
 			"desc": "Jakiś tam opis"
 		},
 		{
-			"id": 3,
-            "img": "imgs/staff/doctor 3.jpg",
-			"name": "Joanna Nowal",
-			"profession": "Pediatra",
-			"desc": "Jakiś tam opis"
-		},
-		{
-			"id": 4,
             "img": "imgs/staff/doctor 4.jpg",
 			"name": "Karolina Macher",
-			"profession": "Lekarz rodzinny",
+			"spec": "Lekarz rodzinny",
+			"desc": "Jakiś tam opis"
+		},
+		{
+            "img": "imgs/staff/doctor 1.jpg",
+			"name": "Adam Kowalski",
+			"spec": "Pediatra",
+			"desc": "Jakiś tam opis"
+		},
+        {
+            "img": "imgs/staff/doctor 3.jpg",
+			"name": "Joanna Nowal",
+			"spec": "Pediatra",
 			"desc": "Jakiś tam opis"
 		}
 	],
 	"pielegniarze": [
 		{
-			"id": 5,
             "img": "imgs/staff/nurse 1.jpg",
 			"name": "Anna Skoczylas",
-			"profession": "Pielęgniarka",
+			"spec": "Pielęgniarka",
 			"desc": "Jakiś tam opis"
 		},
 		{
-			"id": 6,
             "img": "imgs/staff/nurse 2.jpg",
 			"name": "Julia Chrzan",
-			"profession": "Pielęgniarka",
+			"spec": "Pielęgniarka",
 			"desc": "Jakiś tam opis"
 		}
 	],
 	"polozne": [
 		{
-			"id": 7,
             "img": "imgs/staff/midwife 1.jpg",
 			"name": "Felicja Kijas",
-			"profession": "Położna",
+			"spec": "Położna",
 			"desc": "Jakiś tam opis"
 		},
 		{
-			"id": 8,
             "img": "imgs/staff/midwife 2.jpg",
 			"name": "Patrycja Bizoń",
-			"profession": "Położna",
+			"spec": "Położna",
 			"desc": "Jakiś tam opis"
 		}
 	]
