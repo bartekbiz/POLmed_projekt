@@ -1,262 +1,262 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="styles/style.min.css" rel="stylesheet" />
-    <link href="styles/custom_style.css" rel="stylesheet" />
-    <title>Zarezerwój wizytę - POLmed</title>
-  </head>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="styles/style.min.css" rel="stylesheet" />
+		<link href="styles/custom_style.css" rel="stylesheet" />
+		<title>Zarezerwój wizytę - POLmed</title>
+	</head>
 
-  <body>
-    <nav
-      id="navbar"
-      class="navbar py-3 navbar-expand-md top-0 w-100"
-      style="z-index: 9999"
-    >
-      <div class="container">
-        <a class="navbar-brand text-primary" href="index.html"
-          ><img
-            src="imgs/logo_polmed.png"
-            style="height: 3.5rem; margin-top: -0.5rem; margin-bottom: -1rem"
-            alt="POLmed"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar-menu"
-          aria-controls="navbar-menu"
-          aria-expanded="false"
-          aria-label="Menu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-menu">
-          <ul class="navbar-nav ms-md-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="staff.html">Zarezerwuj wizytę</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="konto"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <b>Jan Kowalski</b>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="konto">
-                <a class="dropdown-item" href="#">Konto</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Wyloguj się</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="page-header p-3 pt-5">
-        <h2>Wybierz szczegóły wizyty</h2>
-      </div>
-      <div class="p-5">
-        <div class="row">
-          <div class="col-sm pb-4">
-            <img class="w-100" src="imgs/logo_polmed.png" alt="" />
-            <h5 id="lekarz" class="card-title"></h5>
-            <h6 id="spec" class="card-subtitle mb-2 text-muted"></h6>
-            <p class="card-text">Jakiś tam opis</p>
-          </div>
-          <div class="col"></div>
-          <div class="col-sm">
-            <div class="container pb-4">
-              <b>Wybierz cel wizyty</b>
-              <select id="cel" class="cel form-select" onchange="pass(this);" aria-label="select-visit-purpose">
-                <option selected>Kliknij, aby wybrać</option>
-                <option value="1">Wizyta kontrolna</option>
-                <option value="2">Konsultacja</option>
-                <option value="3">Choroba</option>
-                <option value="4">Wypisanie recepty</option>
-                <option value="5">Szczepienie</option>
-              </select>
-            </div>
-            <div class="container pb-4">
-              <b>Wybierz datę wizyty</b>
-              <select id="data" class="data form-select" onchange="pass(this);" aria-label="select-visit-date">
-                <option selected>Kliknij, aby wybrać</option>
-                <option id="date0" value="0"></option>
-                <option id="date1" value="1"></option>
-                <option id="date2" value="2"></option>
-                <option id="date3" value="3"></option>
-                <option id="date4" value="4"></option>
-                <option id="date5" value="5"></option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="row pt-5">
-          <div class="col-sm"></div>
-          <div class="col-sm"></div>
-          <div class="col-sm">
-            <div class="container">
-              <a href="#" class="confirm-booking btn btn-primary w-100"
-                >Zarezerwuj wybraną wizytę</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mt-5">
-      <footer class="bg-light text-center text-md-start">
-        <div class="container p-4">
-          <div class="row">
-            <div class="col-md-9">
-              <h4>POLmed</h4>
-              <p>
-                ul. Świętego Sebastiana 9<br />
-                31-049 Kraków, Polska<br />
-                <br />
-                <b>Napisz:</b>
-                <a class="link-dark" href="mailto:POLMED.krakow@gmail.com"
-                  >POLMED.krakow@gmail.com</a
-                ><br />
-                <b>Zadzwoń:</b>
-                <a class="link-dark" href="tel:+48672825425">+48 672 825 425</a
-                ><br />
-                <br />
-                <b>NIP:</b> 945-145-13-87<br />
-                <b>NFZ:</b> 061/400075<br />
-                <b>RPWDL:</b> 000000005874<br />
-                <b>BDO:</b> 000013799<br />
-                <br />
-              </p>
-            </div>
-            <div class="col-md-3 d-flex align-items-center">
-              <div class="row">
-                <div class="col-8 d-flex align-items-center">
-                  <a href="https://nfz.gov.pl/">
-                    <img
-                      src="imgs/NFZ_logo.png"
-                      alt="NFZ"
-                      class="img-fluid footer-logo"
-                    />
-                  </a>
-                </div>
-                <div class="col-4 d-flex align-items-center">
-                  <a href="https://www.facebook.com/">
-                    <img
-                      src="imgs/f_logo_RGB-Blue_512.png"
-                      alt="Facebook"
-                      class="img-fluid footer-logo"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <noscript>
-      <div
-        class="alert alert-warning position-fixed bottom-0 end-0 m-3"
-        role="alert"
-        style="z-index: 9999"
-      >
-        JavaScript jest wyłączony. Niektóre funkcje tej strony internetowej mogą
-        nie działać poprawnie.
-      </div>
-    </noscript>
-    <script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      const params = new URLSearchParams(new URL(window.location.href).search);
-      document.getElementById("lekarz").innerText = params.get("lekarz");
-      document.getElementById("spec").innerText = params.get("spec");
+	<body>
+		<nav
+			id="navbar"
+			class="navbar py-3 navbar-expand-md top-0 w-100"
+			style="z-index: 9999"
+		>
+			<div class="container">
+				<a class="navbar-brand text-primary" href="index.html"
+					><img
+						src="imgs/logo_polmed.png"
+						style="height: 3.5rem; margin-top: -0.5rem; margin-bottom: -1rem"
+						alt="POLmed"
+				/></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbar-menu"
+					aria-controls="navbar-menu"
+					aria-expanded="false"
+					aria-label="Menu"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar-menu">
+					<ul class="navbar-nav ms-md-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="staff.html">Zarezerwuj wizytę</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="konto"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<b>Jan Kowalski</b>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="konto">
+								<a class="dropdown-item" href="#">Konto</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Wyloguj się</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="page-header p-3 pt-5">
+				<h2>Wybierz szczegóły wizyty</h2>
+			</div>
+			<div class="p-5">
+				<div class="row">
+					<div class="col-sm pb-4">
+						<img class="w-100" src="imgs/logo_polmed.png" alt="" />
+						<h5 id="lekarz" class="card-title"></h5>
+						<h6 id="spec" class="card-subtitle mb-2 text-muted"></h6>
+						<p class="card-text">Jakiś tam opis</p>
+					</div>
+					<div class="col"></div>
+					<div class="col-sm">
+						<div class="container pb-4">
+							<b>Wybierz cel wizyty</b>
+							<select id="cel" class="cel form-select" onchange="pass(this);" aria-label="select-visit-purpose">
+								<option selected>Kliknij, aby wybrać</option>
+								<option value="1">Wizyta kontrolna</option>
+								<option value="2">Konsultacja</option>
+								<option value="3">Choroba</option>
+								<option value="4">Wypisanie recepty</option>
+								<option value="5">Szczepienie</option>
+							</select>
+						</div>
+						<div class="container pb-4">
+							<b>Wybierz datę wizyty</b>
+							<select id="data" class="data form-select" onchange="pass(this);" aria-label="select-visit-date">
+								<option selected>Kliknij, aby wybrać</option>
+								<option id="date0" value="0"></option>
+								<option id="date1" value="1"></option>
+								<option id="date2" value="2"></option>
+								<option id="date3" value="3"></option>
+								<option id="date4" value="4"></option>
+								<option id="date5" value="5"></option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row pt-5">
+					<div class="col-sm"></div>
+					<div class="col-sm"></div>
+					<div class="col-sm">
+						<div class="container">
+							<a href="#" class="confirm-booking btn btn-primary w-100"
+								>Zarezerwuj wybraną wizytę</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mt-5">
+			<footer class="bg-light text-center text-md-start">
+				<div class="container p-4">
+					<div class="row">
+						<div class="col-md-9">
+							<h4>POLmed</h4>
+							<p>
+								ul. Świętego Sebastiana 9<br />
+								31-049 Kraków, Polska<br />
+								<br />
+								<b>Napisz:</b>
+								<a class="link-dark" href="mailto:POLMED.krakow@gmail.com"
+									>POLMED.krakow@gmail.com</a
+								><br />
+								<b>Zadzwoń:</b>
+								<a class="link-dark" href="tel:+48672825425">+48 672 825 425</a
+								><br />
+								<br />
+								<b>NIP:</b> 945-145-13-87<br />
+								<b>NFZ:</b> 061/400075<br />
+								<b>RPWDL:</b> 000000005874<br />
+								<b>BDO:</b> 000013799<br />
+								<br />
+							</p>
+						</div>
+						<div class="col-md-3 d-flex align-items-center">
+							<div class="row">
+								<div class="col-8 d-flex align-items-center">
+									<a href="https://nfz.gov.pl/">
+										<img
+											src="imgs/NFZ_logo.png"
+											alt="NFZ"
+											class="img-fluid footer-logo"
+										/>
+									</a>
+								</div>
+								<div class="col-4 d-flex align-items-center">
+									<a href="https://www.facebook.com/">
+										<img
+											src="imgs/f_logo_RGB-Blue_512.png"
+											alt="Facebook"
+											class="img-fluid footer-logo"
+										/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<noscript>
+			<div
+				class="alert alert-warning position-fixed bottom-0 end-0 m-3"
+				role="alert"
+				style="z-index: 9999"
+			>
+				JavaScript jest wyłączony. Niektóre funkcje tej strony internetowej mogą
+				nie działać poprawnie.
+			</div>
+		</noscript>
+		<script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			const params = new URLSearchParams(new URL(window.location.href).search);
+			document.getElementById("lekarz").innerText = params.get("lekarz");
+			document.getElementById("spec").innerText = params.get("spec");
 
-      var minValueToAdd = getTodayRemainingMs();
-      var maxValueToAdd = 4 * 24 * 60 * 60 * 1000;
+			var minValueToAdd = getTodayRemainingMs();
+			var maxValueToAdd = 4 * 24 * 60 * 60 * 1000;
 
-      const randomDates = [];
-      for (let i = 0; i < 6; i++) {
-        randomDates.push(
-        getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd))
-        );
-      }
-      randomDates.sort();
+			const randomDates = [];
+			for (let i = 0; i < 6; i++) {
+				randomDates.push(
+				getRandomDate(getRandomInt(minValueToAdd, maxValueToAdd))
+				);
+			}
+			randomDates.sort();
 
-      for (let i = 0; i < 6; i++) {
-        document.getElementById(`date${i}`).innerText = randomDates[i];
-      }
+			for (let i = 0; i < 6; i++) {
+				document.getElementById(`date${i}`).innerText = randomDates[i];
+			}
 
-      // pass date and purpose
-      document.onclick = function(e) {
-        if(e.target.classList.contains("confirm-booking")) {
-          let purposeElement = document.getElementById("cel");
-          let purposeElementText = purposeElement.options[purposeElement.selectedIndex].text;
+			// pass date and purpose
+			document.onclick = function(e) {
+				if(e.target.classList.contains("confirm-booking")) {
+					let purposeElement = document.getElementById("cel");
+					let purposeElementText = purposeElement.options[purposeElement.selectedIndex].text;
 
-          let dateElement = document.getElementById("data");
-          let dateElementText = dateElement.options[dateElement.selectedIndex].text;
+					let dateElement = document.getElementById("data");
+					let dateElementText = dateElement.options[dateElement.selectedIndex].text;
 
-          let defaultSelectText = "Kliknij, aby wybrać";
-          if (purposeElementText != defaultSelectText && dateElementText != defaultSelectText) {
-            window.open("summary.html?cel=" + purposeElementText + "&data=" + dateElementText, "_self");
-          }
-        }
-      }
+					let defaultSelectText = "Kliknij, aby wybrać";
+					if (purposeElementText != defaultSelectText && dateElementText != defaultSelectText) {
+						window.open("summary.html?cel=" + purposeElementText + "&data=" + dateElementText, "_self");
+					}
+				}
+			}
 
-      // random date function
-      function getRandomDate(msToAdd) {
-        var randomDate = new Date(new Date().getTime() + msToAdd);
-        var yyyy = randomDate.getFullYear();
-        var mm = String(randomDate.getMonth() + 1).padStart(2, "0");
+			// random date function
+			function getRandomDate(msToAdd) {
+				var randomDate = new Date(new Date().getTime() + msToAdd);
+				var yyyy = randomDate.getFullYear();
+				var mm = String(randomDate.getMonth() + 1).padStart(2, "0");
 
-        // making sure that weekend date is not returned
-        var weekDay = randomDate.getDay();
-        if (weekDay == 6) {
-        var dd = String(randomDate.getDate() + 2).padStart(2, "0");
-        } else if (weekDay == 0) {
-        var dd = String(randomDate.getDate() + getRandomInt(2, 6)).padStart(
-          2,
-          "0"
-        );
-        } else {
-        var dd = String(randomDate.getDate()).padStart(2, "0");
-        }
+				// making sure that weekend date is not returned
+				var weekDay = randomDate.getDay();
+				if (weekDay == 6) {
+				var dd = String(randomDate.getDate() + 2).padStart(2, "0");
+				} else if (weekDay == 0) {
+				var dd = String(randomDate.getDate() + getRandomInt(2, 6)).padStart(
+					2,
+					"0"
+				);
+				} else {
+				var dd = String(randomDate.getDate()).padStart(2, "0");
+				}
 
-        // making sure that returned hours are between 10:00 and 18:00
-        var hh = randomDate.getHours();
-        if (hh < 10 || hh > 18) {
-        hh = 10 + getRandomInt(0, 8);
-        }
+				// making sure that returned hours are between 10:00 and 18:00
+				var hh = randomDate.getHours();
+				if (hh < 10 || hh > 18) {
+				hh = 10 + getRandomInt(0, 8);
+				}
 
-        // selecting minutes
-        if (msToAdd % 2 == 0) {
-        var min = "00";
-        } else {
-        var min = "30";
-        }
+				// selecting minutes
+				if (msToAdd % 2 == 0) {
+				var min = "00";
+				} else {
+				var min = "30";
+				}
 
-        randomDate = yyyy + "." + mm + "." + dd + " - " + hh + ":" + min;
-        return randomDate;
-      }
+				randomDate = yyyy + "." + mm + "." + dd + " - " + hh + ":" + min;
+				return randomDate;
+			}
 
-      function getTodayRemainingMs() {
-        var today = new Date();
-        var tommorrow = new Date();
-        tommorrow.setDate(tommorrow.getDate() + 1);
-        tommorrow.setHours(0, 0, 0, 0);
+			function getTodayRemainingMs() {
+				var today = new Date();
+				var tommorrow = new Date();
+				tommorrow.setDate(tommorrow.getDate() + 1);
+				tommorrow.setHours(0, 0, 0, 0);
 
-        return tommorrow - today;
-      }
+				return tommorrow - today;
+			}
 
-      function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min) + min);
-      }
-    </script>
-  </body>
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min) + min);
+			}
+		</script>
+	</body>
 </html>
