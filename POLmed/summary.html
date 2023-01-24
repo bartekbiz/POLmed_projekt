@@ -152,8 +152,8 @@
             .then((data) => {
                 let lekarz = data.lekarze.concat(data.polozne, data.pielegniarze)[params.get("id")];
 
-                document.getElementById("dane").innerHTML = "<b>Dane specjalisty:</b> <br>" + lekarz.name + "<br>" + lekarz.spec;
-                //document.getElementById("spec").innerHTML = "<b></b> " + lekarz.spec;
+                document.getElementById("dane").innerHTML = 
+                "<b>Dane specjalisty:</b> <br>" + lekarz.name + "<br>" + lekarz.spec;
         });
     </script>
   </body>
