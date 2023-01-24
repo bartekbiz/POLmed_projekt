@@ -20,7 +20,6 @@ fetch("./data/staff.json")
         
         let spec = spece.concat(data.polozne, data.pielegniarze)[params.get("id")];
 
-        //document.getElementById("img").src = spec.img;
         document.getElementById("name").innerText = spec.name;
         document.getElementById("spec").innerText = spec.spec;
         document.getElementById("desc").innerText = spec.desc;
