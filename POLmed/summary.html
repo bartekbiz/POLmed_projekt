@@ -1,160 +1,165 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="styles/style.min.css" rel="stylesheet" />
-    <link href="styles/custom_style.css" rel="stylesheet" />
-    <title>Zarezerwój wizytę - POLmed</title>
-  </head>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="styles/style.min.css" rel="stylesheet" />
+		<link href="styles/custom_style.css" rel="stylesheet" />
+		<title>Zarezerwój wizytę - POLmed</title>
+	</head>
 
-  <body>
-    <nav
-      id="navbar"
-      class="navbar py-3 navbar-expand-md top-0 w-100"
-      style="z-index: 9999"
-    >
-      <div class="container">
-        <a class="navbar-brand text-primary" href="index.html"
-          ><img
-            src="imgs/logo_polmed.png"
-            style="height: 3.5rem; margin-top: -0.5rem; margin-bottom: -1rem"
-            alt="POLmed"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar-menu"
-          aria-controls="navbar-menu"
-          aria-expanded="false"
-          aria-label="Menu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-menu">
-          <ul class="navbar-nav ms-md-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="staff.html">Zarezerwuj wizytę</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="konto"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <b>Jan Kowalski</b>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="konto">
-                <a class="dropdown-item" href="#">Konto</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Wyloguj się</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container text-center">
-        <div class="page-header p-3 pt-5">
-            <h2 class="text-success pb-2">&#10004; Twoja wizyta została zarezerwowana pomyślnie!</h2>
-            <h3 class="text-info"><b>Szczegóły wizyty:</b></h3>
-            <h5 id="data" class="text-info"></h5>
-            <h5 class="text-info"><b>Adres:</b> ul. Świętego Sebastiana 9 <br> 31-049 Kraków, Polska</h5>
-            <h5 id="dane" class="text-info"></h5>
-            <h5 id="cel" class="text-info"></h5>
-        </div>
-        <div class="row pt-5">
-            <div class="col-sm"></div>
-            <div class="col-sm"></div>
-            <div class="col-sm">
-                <div class="container">
-                    <a href="index.html" class="btn btn-primary w-100"
-                    >Powrót na stronę główną</a
-                    >
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mt-5">
-      <footer class="bg-light text-center text-md-start">
-        <div class="container p-4">
-          <div class="row">
-            <div class="col-md-9">
-              <h4>POLmed</h4>
-              <p>
-                ul. Świętego Sebastiana 9<br />
-                31-049 Kraków, Polska<br />
-                <br />
-                <b>Napisz:</b>
-                <a class="link-dark" href="mailto:POLMED.krakow@gmail.com"
-                  >POLMED.krakow@gmail.com</a
-                ><br />
-                <b>Zadzwoń:</b>
-                <a class="link-dark" href="tel:+48672825425">+48 672 825 425</a
-                ><br />
-                <br />
-                <b>NIP:</b> 945-145-13-87<br />
-                <b>NFZ:</b> 061/400075<br />
-                <b>RPWDL:</b> 000000005874<br />
-                <b>BDO:</b> 000013799<br />
-                <br />
-              </p>
-            </div>
-            <div class="col-md-3 d-flex align-items-center">
-              <div class="row">
-                <div class="col-8 d-flex align-items-center">
-                  <a href="https://nfz.gov.pl/">
-                    <img
-                      src="imgs/NFZ_logo.png"
-                      alt="NFZ"
-                      class="img-fluid footer-logo"
-                    />
-                  </a>
-                </div>
-                <div class="col-4 d-flex align-items-center">
-                  <a href="https://www.facebook.com/">
-                    <img
-                      src="imgs/f_logo_RGB-Blue_512.png"
-                      alt="Facebook"
-                      class="img-fluid footer-logo"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <noscript>
-      <div
-        class="alert alert-warning position-fixed bottom-0 end-0 m-3"
-        role="alert"
-        style="z-index: 9999"
-      >
-        JavaScript jest wyłączony. Niektóre funkcje tej strony internetowej mogą
-        nie działać poprawnie.
-      </div>
-    </noscript>
-    <script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const params = new URLSearchParams(new URL(window.location.href).search);
-        document.getElementById("cel").innerHTML = "<b>Cel:</b> " + params.get("cel");
-		    document.getElementById("data").innerHTML = "<b>Data:</b> " + params.get("data");
+	<body>
+		<nav
+			id="navbar"
+			class="navbar py-3 navbar-expand-md top-0 w-100"
+			style="z-index: 9999"
+		>
+			<div class="container">
+				<a class="navbar-brand text-primary" href="index.html"
+					><img
+						src="imgs/logo_polmed.png"
+						style="height: 3.5rem; margin-top: -0.5rem; margin-bottom: -1rem"
+						alt="POLmed"
+				/></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbar-menu"
+					aria-controls="navbar-menu"
+					aria-expanded="false"
+					aria-label="Menu"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar-menu">
+					<ul class="navbar-nav ms-md-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="staff.html">Zarezerwuj wizytę</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="konto"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<b>Jan Kowalski</b>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="konto">
+								<a class="dropdown-item" href="#">Konto</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Wyloguj się</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container text-center">
+				<div class="page-header p-3 pt-5">
+						<h2 class="text-success pb-2">&#10004; Twoja wizyta została zarezerwowana pomyślnie!</h2>
+						<h3 class="text-info"><b>Szczegóły wizyty:</b></h3>
+						<h5 id="data" class="text-info"></h5>
+						<h5 class="text-info"><b>Adres:</b> ul. Świętego Sebastiana 9 <br> 31-049 Kraków, Polska</h5>
+						<h5 id="dane" class="text-info"></h5>
+						<h5 id="cel" class="text-info"></h5>
+				</div>
+				<div class="row pt-5">
+						<div class="col-sm"></div>
+						<div class="col-sm"></div>
+						<div class="col-sm">
+								<div class="container">
+										<a href="index.html" class="btn btn-primary w-100"
+										>Powrót na stronę główną</a
+										>
+								</div>
+						</div>
+				</div>
+		</div>
+		<div class="mt-5">
+			<footer class="bg-light text-center text-md-start">
+				<div class="container p-4">
+					<div class="row">
+						<div class="col-md-9">
+							<h4>POLmed</h4>
+							<p>
+								ul. Świętego Sebastiana 9<br />
+								31-049 Kraków, Polska<br />
+								<br />
+								<b>Napisz:</b>
+								<a class="link-dark" href="mailto:POLMED.krakow@gmail.com"
+									>POLMED.krakow@gmail.com</a
+								><br />
+								<b>Zadzwoń:</b>
+								<a class="link-dark" href="tel:+48672825425">+48 672 825 425</a
+								><br />
+								<br />
+								<b>NIP:</b> 945-145-13-87<br />
+								<b>NFZ:</b> 061/400075<br />
+								<b>RPWDL:</b> 000000005874<br />
+								<b>BDO:</b> 000013799<br />
+								<br />
+							</p>
+						</div>
+						<div class="col-md-3 d-flex align-items-center">
+							<div class="row">
+								<div class="col-8 d-flex align-items-center">
+									<a href="https://nfz.gov.pl/">
+										<img
+											src="imgs/NFZ_logo.png"
+											alt="NFZ"
+											class="img-fluid footer-logo"
+										/>
+									</a>
+								</div>
+								<div class="col-4 d-flex align-items-center">
+									<a href="https://www.facebook.com/">
+										<img
+											src="imgs/f_logo_RGB-Blue_512.png"
+											alt="Facebook"
+											class="img-fluid footer-logo"
+										/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<noscript>
+			<div
+				class="alert alert-warning position-fixed bottom-0 end-0 m-3"
+				role="alert"
+				style="z-index: 9999"
+			>
+				JavaScript jest wyłączony. Niektóre funkcje tej strony internetowej mogą
+				nie działać poprawnie.
+			</div>
+		</noscript>
+		<script src="styles/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+				const params = new URLSearchParams(new URL(window.location.href).search);
+				document.getElementById("cel").innerHTML = "<b>Cel:</b> " + params.get("cel");
+				document.getElementById("data").innerHTML = "<b>Data:</b> " + params.get("data");
 
-        fetch("./data/staff.json")
-            .then((res) => res.json())
-            .then((data) => {
-                let lekarz = data.lekarze.concat(data.polozne, data.pielegniarze)[params.get("id")];
+				fetch("./data/staff.json")
+					.then((res) => res.json())
+					.then((data) => {
+						let spece = [];
 
-                document.getElementById("dane").innerHTML = 
-                "<b>Dane specjalisty:</b> <br>" + lekarz.name + "<br>" + lekarz.spec;
-        });
-    </script>
-  </body>
+						for(var i in data.lekarze) {
+							spece = spece.concat(data.lekarze[i]);
+						}
+
+						let spec = spece.concat(data.polozne, data.pielegniarze)[params.get("id")];
+
+						document.getElementById("dane").innerHTML = "<b>Dane specjalisty:</b> <br>" + spec.name + "<br>" + spec.spec;
+				});
+		</script>
+	</body>
 </html>
