@@ -1,11 +1,11 @@
 fetch("./data/staff.json").then((res) => res.json()).then((data) => {
-	if(window.location.hash == "#lekarze" || window.location.hash == "#pielegniarze" || window.location.hash == "#polozne") {
+	if(window.location.hash == "#lekarze" || window.location.hash == "#pielegniarki" || window.location.hash == "#polozne") {
 		bootstrap.Tab.getOrCreateInstance(document.querySelector(window.location.hash)).show();
 	}
 	
 	const trwszyscy = document.querySelector("#trwszyscy");
 	const trlekarze = document.querySelector("#trlekarze");
-	const trpielegniarze = document.querySelector("#trpielegniarze");
+	const trpielegniarki = document.querySelector("#trpielegniarki");
 	const trpolozne = document.querySelector("#trpolozne");
 
 	//I know, I know, not proud of this code but time constraints
@@ -15,7 +15,7 @@ fetch("./data/staff.json").then((res) => res.json()).then((data) => {
 
 	trlekarze.innerHTML = "";
 	trpolozne.innerHTML = "";
-	trpielegniarze.innerHTML = "";
+	trpielegniarki.innerHTML = "";
 
 	for(var i in data.lekarze) {
 		let lekarze = "";
@@ -53,14 +53,14 @@ fetch("./data/staff.json").then((res) => res.json()).then((data) => {
 		npoloznych++;
 	}
 
-	for(var i in data.pielegniarze) {
-		trpielegniarze.innerHTML += '<div class="col-md-6 p-3"> \
+	for(var i in data.pielegniarki) {
+		trpielegniarki.innerHTML += '<div class="col-md-6 p-3"> \
 			<div class="card"> \
 				<div class="card-body"> \
-					<img class="w-100" src="' + data.pielegniarze[i].img + '" alt=""/> \
-					<h5 class="card-title pt-2">' + data.pielegniarze[i].name + '</h5> \
-					<h6 class="card-subtitle mb-2 text-muted">' + data.pielegniarze[i].spec + '</h6> \
-					<p class="card-text">' + data.pielegniarze[i].desc + '</p> \
+					<img class="w-100" src="' + data.pielegniarki[i].img + '" alt=""/> \
+					<h5 class="card-title pt-2">' + data.pielegniarki[i].name + '</h5> \
+					<h6 class="card-subtitle mb-2 text-muted">' + data.pielegniarki[i].spec + '</h6> \
+					<p class="card-text">' + data.pielegniarki[i].desc + '</p> \
 					<a href="booking.html?id=' + parseInt(parseInt(nlekarzy)+parseInt(npoloznych)+parseInt(i)) + '" class="btn btn-primary w-100">Zarezerwuj wizytę</a> \
 				</div> \
 			</div> \
@@ -69,5 +69,5 @@ fetch("./data/staff.json").then((res) => res.json()).then((data) => {
 
 	trwszyscy.innerHTML = trlekarze.innerHTML;
 	trwszyscy.innerHTML += "<h3>Położne</h3>" + trpolozne.innerHTML;
-	trwszyscy.innerHTML += "<h3>Pielęgniarze</h3>" + trpielegniarze.innerHTML;
+	trwszyscy.innerHTML += "<h3>Pielęgniarki</h3>" + trpielegniarze.innerHTML;
 });

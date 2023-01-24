@@ -18,7 +18,7 @@ fetch("./data/staff.json")
             spece = spece.concat(data.lekarze[i]);
         }
         
-        let spec = spece.concat(data.polozne, data.pielegniarze)[params.get("id")];
+        let spec = spece.concat(data.polozne, data.pielegniarki)[params.get("id")];
 
         document.getElementById("name").innerText = spec.name;
         document.getElementById("spec").innerText = spec.spec;
