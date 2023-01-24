@@ -39,7 +39,9 @@ for (let i = 0; i < 6; i++) {
 randomDates.sort();
 
 for (let i = 0; i < 6; i++) {
-    document.getElementById(`date${i}`).innerText = randomDates[i];
+    date = randomDates[i];
+    dateToShow = date.slice(13) + " - " + date.slice(8, 10) + date.slice(4, 7) + "."+ date.slice(0, 4);
+    document.getElementById(`date${i}`).innerText = dateToShow;
 }
 
 // pass date and purpose
