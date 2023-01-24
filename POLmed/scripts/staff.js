@@ -6,15 +6,14 @@ fetch("./data/staff.json")
 		const trpielegniarze = document.querySelector("#trpielegniarze");
 		const trpolozne = document.querySelector("#trpolozne");
 
-		trwszyscy.innerHTML = "";
-		trlekarze.innerHTML = "";
-		trpolozne.innerHTML = "";
-		trpielegniarze.innerHTML = "";
-
 		//I know, I know, not proud of this code but time constraints
 
 		let nlekarzy = 0;
 		let npoloznych = 0;
+
+		trlekarze.innerHTML = "";
+		trpolozne.innerHTML = "";
+		trpielegniarze.innerHTML = "";
 
 		for(var i in data.lekarze) {
 			trlekarze.innerHTML += '<div class="col-md-4 p-3"> \
@@ -60,7 +59,7 @@ fetch("./data/staff.json")
 			</div>';
 		}
 
-		trwszyscy.innerHTML += trlekarze.innerHTML;
+		trwszyscy.innerHTML = trlekarze.innerHTML;
 		trwszyscy.innerHTML += trpolozne.innerHTML;
 		trwszyscy.innerHTML += trpielegniarze.innerHTML;
 	});
