@@ -63,9 +63,10 @@
         <div class="page-header p-3 pt-5">
             <h2 class="text-success pb-2">&#10004; Twoja wizyta została zarezerwowana pomyślnie!</h2>
             <h3 class="text-info"><b>Szczegóły wizyty:</b></h3>
-            <h5 id="cel" class="text-info"></h5>
             <h5 id="data" class="text-info"></h5>
             <h5 class="text-info"><b>Adres:</b> ul. Świętego Sebastiana 9 <br> 31-049 Kraków, Polska</h5>
+            <h5 id="dane" class="text-info"></h5>
+            <h5 id="cel" class="text-info"></h5>
         </div>
         <div class="row pt-5">
             <div class="col-sm"></div>
@@ -145,6 +146,15 @@
         const params = new URLSearchParams(new URL(window.location.href).search);
         document.getElementById("cel").innerHTML = "<b>Cel:</b> " + params.get("cel");
 		    document.getElementById("data").innerHTML = "<b>Data:</b> " + params.get("data");
+
+        fetch("./data/staff.json")
+            .then((res) => res.json())
+            .then((data) => {
+                let lekarz = data.lekarze.concat(data.polozne, data.pielegniarze)[params.get("id")];
+
+                document.getElementById("dane").innerHTML = 
+                "<b>Dane specjalisty:</b> <br>" + lekarz.name + "<br>" + lekarz.spec;
+        });
     </script>
   </body>
 </html>

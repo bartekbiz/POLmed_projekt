@@ -42,7 +42,7 @@ document.onclick = function(e) {
 
         let defaultSelectText = "Kliknij, aby wybrać";
         if (purposeElementText != defaultSelectText && dateElementText != defaultSelectText) {
-            window.open("summary.html?cel=" + purposeElementText + "&data=" + dateElementText, "_self");
+            window.open("summary.html?cel=" + purposeElementText + "&data=" + dateElementText + "&id=" + params.get("id"), "_self");
         }
     }
 }
