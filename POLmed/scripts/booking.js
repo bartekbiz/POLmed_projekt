@@ -1,3 +1,13 @@
+// hiding or showing canceled message
+var canceledMessage = document.getElementById("canceled");
+if (window.location.hash == "#canceled") {
+    canceledMessage.style.display = "block";
+}
+else {
+    canceledMessage.style.display = "none";
+}
+
+// fetching data for display
 const params = new URLSearchParams(new URL(window.location.href).search);
 fetch("./data/staff.json")
     .then((res) => res.json())
@@ -16,6 +26,7 @@ fetch("./data/staff.json")
         document.getElementById("desc").innerText = spec.desc;
 });
 
+// choosing random dates
 var minValueToAdd = getTodayRemainingMs();
 var maxValueToAdd = 4 * 24 * 60 * 60 * 1000;
 
@@ -42,7 +53,7 @@ document.onclick = function(e) {
 
         let defaultSelectText = "Kliknij, aby wybrać";
         if (purposeElementText != defaultSelectText && dateElementText != defaultSelectText) {
-            window.open("summary.html?cel=" + purposeElementText + "&data=" + dateElementText + "&id=" + params.get("id"), "_self");
+            window.open("summary.html?id=" +  + params.get("id") + "&cel=" + purposeElementText + "&data=" + dateElementText, "_self");
         }
     }
 }
