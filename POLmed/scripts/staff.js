@@ -22,7 +22,7 @@ fetch("./data/staff.json").then((res) => res.json()).then((data) => {
 		lekarze += "<h3>" + i + "</h3>";
 
 		for(var j in data.lekarze[i]) {
-			lekarze += '<div class="col-md-4 p-3"> \
+			lekarze += '<div class="col-md-6 p-3"> \
 				<div class="card"> \
 					<div class="card-body"> \
 						<img class="w-100" src="' + data.lekarze[i][j].img + '" alt=""/> \
@@ -39,7 +39,7 @@ fetch("./data/staff.json").then((res) => res.json()).then((data) => {
 	}
 
 	for(var i in data.polozne) {
-		trpolozne.innerHTML += '<div class="col-md-4 p-3"> \
+		trpolozne.innerHTML += '<div class="col-md-6 p-3"> \
 			<div class="card"> \
 				<div class="card-body"> \
 					<img class="w-100" src="' + data.polozne[i].img + '" alt=""/> \
@@ -54,7 +54,7 @@ fetch("./data/staff.json").then((res) => res.json()).then((data) => {
 	}
 
 	for(var i in data.pielegniarze) {
-		trpielegniarze.innerHTML += '<div class="col-md-4 p-3"> \
+		trpielegniarze.innerHTML += '<div class="col-md-6 p-3"> \
 			<div class="card"> \
 				<div class="card-body"> \
 					<img class="w-100" src="' + data.pielegniarze[i].img + '" alt=""/> \
