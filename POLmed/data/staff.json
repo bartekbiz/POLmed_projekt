@@ -12,18 +12,18 @@
 				"name": "Karolina Macher",
 				"spec": "Lekarz rodzinny",
 				"desc": "Jakiś tam opis"
+			},
+			{
+				"img": "imgs/staff/doctor 3.jpg",
+				"name": "Joanna Nowal",
+				"spec": "Lekarz rodzinny",
+				"desc": "Jakiś tam opis"
 			}
 		],
         "Lekarze pediatrzy": [
 			{
 				"img": "imgs/staff/doctor 1.jpg",
 				"name": "Adam Kowalski",
-				"spec": "Lekarz pediatra",
-				"desc": "Jakiś tam opis"
-			},
-			{
-				"img": "imgs/staff/doctor 3.jpg",
-				"name": "Joanna Nowal",
 				"spec": "Lekarz pediatra",
 				"desc": "Jakiś tam opis"
 			}
