@@ -2,12 +2,18 @@ const params = new URLSearchParams(new URL(window.location.href).search);
 fetch("./data/staff.json")
     .then((res) => res.json())
     .then((data) => {
-        let lekarz = data.lekarze.concat(data.polozne, data.pielegniarze)[params.get("id")];
+        let spece = [];
 
-        //document.getElementById("img").src = lekarz.img;
-        document.getElementById("name").innerText = lekarz.name;
-        document.getElementById("spec").innerText = lekarz.spec;
-        document.getElementById("desc").innerText = lekarz.desc;
+        for(var i in data.lekarze) {
+            spece = spece.concat(data.lekarze[i]);
+        }
+        
+        let spec = spece.concat(data.polozne, data.pielegniarze)[params.get("id")];
+
+        //document.getElementById("img").src = spec.img;
+        document.getElementById("name").innerText = spec.name;
+        document.getElementById("spec").innerText = spec.spec;
+        document.getElementById("desc").innerText = spec.desc;
 });
 
 var minValueToAdd = getTodayRemainingMs();

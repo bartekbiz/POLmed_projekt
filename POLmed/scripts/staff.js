@@ -16,18 +16,20 @@ fetch("./data/staff.json")
 		trpielegniarze.innerHTML = "";
 
 		for(var i in data.lekarze) {
-			trlekarze.innerHTML += '<div class="col-md-4 p-3"> \
-				<div class="card"> \
-					<div class="card-body"> \
-						<img class="w-100" src="' + data.lekarze[i].img + '" alt=""/> \
-						<h5 class="card-title pt-2">' + data.lekarze[i].name + '</h5> \
-						<h6 class="card-subtitle mb-2 text-muted">' + data.lekarze[i].spec + '</h6> \
-						<p class="card-text">' + data.lekarze[i].desc + '</p> \
-						<a href="booking.html?id=' + i + '" class="btn btn-primary w-100">Zarezerwuj wizytę</a> \
+			for(var j in data.lekarze[i]) {
+				trlekarze.innerHTML += '<div class="col-md-4 p-3"> \
+					<div class="card"> \
+						<div class="card-body"> \
+							<img class="w-100" src="' + data.lekarze[i][j].img + '" alt=""/> \
+							<h5 class="card-title pt-2">' + data.lekarze[i][j].name + '</h5> \
+							<h6 class="card-subtitle mb-2 text-muted">' + data.lekarze[i][j].spec + '</h6> \
+							<p class="card-text">' + data.lekarze[i][j].desc + '</p> \
+							<a href="booking.html?id=' + nlekarzy + '" class="btn btn-primary w-100">Zarezerwuj wizytę</a> \
+						</div> \
 					</div> \
-				</div> \
-			</div>';
-			nlekarzy++;
+				</div>';
+				nlekarzy++;
+			}
 		}
 
 		for(var i in data.polozne) {

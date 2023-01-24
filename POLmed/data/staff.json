@@ -1,30 +1,34 @@
 {
-	"lekarze": [
-        {
-            "img": "imgs/staff/doctor 2.jpg",
-			"name": "Mariusz Dąb",
-			"spec": "Lekarz rodzinny",
-			"desc": "Jakiś tam opis"
-		},
-		{
-            "img": "imgs/staff/doctor 4.jpg",
-			"name": "Karolina Macher",
-			"spec": "Lekarz rodzinny",
-			"desc": "Jakiś tam opis"
-		},
-		{
-            "img": "imgs/staff/doctor 1.jpg",
-			"name": "Adam Kowalski",
-			"spec": "Lekarz Pediatra",
-			"desc": "Jakiś tam opis"
-		},
-        {
-            "img": "imgs/staff/doctor 3.jpg",
-			"name": "Joanna Nowal",
-			"spec": "Lekarz Pediatra",
-			"desc": "Jakiś tam opis"
-		}
-	],
+	"lekarze": {
+		"Lekarze rodzinni": [
+			{
+				"img": "imgs/staff/doctor 2.jpg",
+				"name": "Mariusz Dąb",
+				"spec": "Lekarz rodzinny",
+				"desc": "Jakiś tam opis"
+			},
+			{
+				"img": "imgs/staff/doctor 4.jpg",
+				"name": "Karolina Macher",
+				"spec": "Lekarz rodzinny",
+				"desc": "Jakiś tam opis"
+			}
+		],
+        "Lekarze pediatrzy": [
+			{
+				"img": "imgs/staff/doctor 1.jpg",
+				"name": "Adam Kowalski",
+				"spec": "Lekarz pediatra",
+				"desc": "Jakiś tam opis"
+			},
+			{
+				"img": "imgs/staff/doctor 3.jpg",
+				"name": "Joanna Nowal",
+				"spec": "Lekarz pediatra",
+				"desc": "Jakiś tam opis"
+			}
+		]
+	},
 	"pielegniarze": [
 		{
             "img": "imgs/staff/nurse 1.jpg",
